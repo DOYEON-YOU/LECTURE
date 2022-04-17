@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello2.html</title>
+</head>
+
+<body>
+  <button onclick="move()">김구라 움직이기</button>
+  <button onclick="move2()">토끼 움직이기</button>
+  <button onclick="move3()">둘 다 움직이기</button>
+  <br><br>
+  <img id="kimImg" src="images/kim1.png">
+  <br>
+  <img id="rabbitImg" src="images/rabbit_1.png">
+  <script>
+    // 페이지 로딩 시점에 실행됨.
+    function move() {
+      // 함수는 특정 시점에 일괄 수행을 할 수 있게끔 준비하는 것. 
+      // 김구라 이미지를 움직이기 위한 함수
+      /* 웹 브라우저 콘솔 창에 move()라는 함수를 호출하면 UI에 변화가 감지됨 
+      move()라는 함수를 button이 onclick(클릭 되었을 때) 호출(Call)을 함 */
+
+      document.querySelector("#kimImg").style.marginLeft = "100px";
+      document.querySelector("#kimImg").style.width = "200px";
+      document.querySelector("#kimImg").style.height = "300px";
+    }
+
+    function move2() {
+      // 토끼 이미지를 움직이기 위한 함수
+      document.querySelector("#rabbitImg").style.marginTop = "100px";
+      document.querySelector("#rabbitImg").style.width = "316px";
+      document.querySelector("#rabbitImg").style.height = "406px";
+    }
+
+    function move3() {
+      // 두 이미지를 모두 움직이기 위한 함수
+      document.querySelector("#kimImg").style.marginLeft = "100px";
+      document.querySelector("#rabbitImg").style.marginTop = "100px";
+    }
+
+    // move();를 입력하면 로딩되는 즉시 변경될 수 있도록 함수를 호출할 수도 있다.
+  </script>
+</body>
+
+</html>

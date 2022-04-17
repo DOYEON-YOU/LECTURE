@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step03_Example.html</title>
+  <style>
+    #result {
+      width: 130px;
+      height: 25px;
+      margin-left: 50px;
+      border-radius: 20px;
+    }
+
+    #result.hover {
+      cursor: pointer;
+    }
+
+    #height {
+      border-radius: 5px;
+    }
+
+    #checkBtn {
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" id="height" placeholder="당신의 키를 입력하세요.">
+  <button id="checkBtn">확인하기</button>
+  <p id="result"></p>
+  <script>
+    /*
+            키를 입력하고 확인 버튼을 눌렀을 때
+            키가 180 이상이면 "키가 크군요" 라는 문자열을 p 요소의 innerText로 출력해 보자.
+        */
+    document.querySelector("#checkBtn").addEventListener("click", function () {
+      //1. 입력한 키를 읽어온다.
+      let h = Number(document.querySelector("#height").value);
+      //2. 만약 입력한 키가 180 이상이면 "키가 크군요"를 p 요소의 inner Text로 출력
+      if (h >= 180) {
+        document.querySelector("#result").innerText = "키가 크군요.";
+        alert("환영합니다.")
+      }
+      if (165 <= h, h < 180) {
+        document.querySelector("#result").innerText = "키가 보통이군요."
+        alert("그럭저럭 작지도 크지도 않으시네요.");
+      }
+      if (h < 165) {
+        document.querySelector("#result").innerText = "키가 작군요."
+        alert("키 작은 사람 출입 금지!");
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_QUIZ2.html</title>
+</head>
+
+<body>
+  <input type="text" id="namearea">
+  <button onclick="save()">저장</button>
+  <button onclick="print()">출력하기</button>
+  <script>
+    let names = [];
+
+    function save() {
+      let a = document.querySelector("#namearea").value;
+      names.push(a);
+    }
+
+    function print() {
+      console.log(names)
+    }
+    /*
+        1. 이름을 입력하고 저장 버튼을 누르면 입력한 이름이 names 배열에 누적 되게끔 해보자.
+        2. 출력하기 버튼을 누르면 names 배열에 저장된 모든 이름을 콘솔창에 순서대로 출력해 보자.
+
+        - hint
+        names.push();
+        console.log();
+    */
+  </script>
+</body>
+
+</html>

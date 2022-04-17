@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_dataType9.html</title>
+</head>
+
+<body>
+  <script>
+    // 함수 안에 배열이 있고 배열 안에 오브젝트가 있다.
+    // getFriends()[0].num => 함수 안에 배열이 있고 배열 안에 오브젝트가 있고 오브젝트 안에 문자열이 있음.
+    let getFriends = function () {
+      let friends = [];
+      //push를 사용해 friends라는 배열에 세 가지의 오브젝트를 넣은 것이다.
+      friends.push({
+        num: 1,
+        name: "권도연",
+        addr: "서울시"
+      });
+      friends.push({
+        num: 2,
+        name: "장준",
+        addr: "강남구"
+      });
+      friends.push({
+        num: 3,
+        name: "땃쥐",
+        addr: "개포동"
+      });
+      return friends;
+      // friends라는 변수 안에 들어있는 배열의 참조값을 반환해준다는 의미이다.
+      // 배열을 반환해준 것
+    };
+
+    //a는 array type (반환해줬으니까 이빡대가리야)
+    let a = getFriends();
+
+    // getFriends라는 key에 getFriends라는 value를 넣은 것이다.
+    // value getFriends는 function type이다.
+    let util = {
+      getFriends: getFriends
+    };
+  </script>
+</body>
+
+</html>

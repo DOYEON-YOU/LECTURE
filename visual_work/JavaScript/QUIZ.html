@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>quiz.html</title>
+</head>
+
+<body>
+  <button onclick="count()">눌러보세요</button>
+  <button onclick="reset()">Reset</button>
+  <p id="currentCount">0번</p>
+  <script>
+    /*
+            1. 눌러보세요 버튼을 눌렀을 때 id가 currentCount인 p 요소의 innerText에 버튼을 클릭한 횟수를 출력해 보세요.
+            0번, 1번, 2번, 3번, ...
+
+            2. Reset버튼을 누르면 0번부터 다시 시작할 수 있도록 해 보세요.
+        */
+    let countnumber = 0;
+
+    function count() {
+      countnumber = countnumber + 1;
+      document.querySelector("#currentCount").innerText = countnumber + "번";
+    }
+
+    function reset() {
+      countnumber = 0;
+      document.querySelector("#currentCount").innerText = countnumber + "번";
+    }
+  </script>
+</body>
+
+</html>*

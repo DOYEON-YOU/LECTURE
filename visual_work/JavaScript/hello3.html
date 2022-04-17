@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello3.html</title>
+</head>
+
+<body>
+  <h1>javascript 테스트</h1>
+  <button onclick="change()">바꾸기</button>
+  <button onclick="increase()">10 증가시키기</button>
+  <script>
+    let a = 10;
+
+    /*
+        let은 변수이다. 변수는 어떤 값을 기억할 수 있는 이름 지어진 기억 공간이다.
+        let 변수명(key) = 값(value);
+        let = 의 =(equal) 은 같다의 의미가 절대 아님.
+        [박스에 사과를 넣어!] 를 프로그래밍 언어로 표현하면 [박스 = 사과] 가 된다.
+        따라서 위 let a=10;의 의미는
+        a라는 이름의 기억 공간을 만들어서 10이라는 숫자를 대입해라
+        라는 의미이다.
+        =: 대입 연산자
+    */
+
+    function change() {
+      a = 999;
+      /* 
+          바꾸기 버튼을 눌렀을 때 이미 만들어진 a라는 변수에 999를 대입해 보자.
+          이렇게 작성하면 페이지 로딩 시점이 아닌 함수가 호출되었을 때 변수의 값이 변경된다.
+          페이지 로딩 직후 웹 브라우저 콘솔 창에 a를 입력해 보고,
+          바꾸기 버튼을 누른 후 다시 a를 입력해 보면 알 수 있다.
+          함수 안에서는 함수의 바깥 영역에 만들어진 변수를 참조할 수 있다. (역으로는 불가능하다.) 변수를 만드는 영역도 중요하다.
+          숫자가 들어있는 변수를 이용해서 산술연산을 할 수 있다. 연산을 하고 나면 해당 위치는 연산의 결과값으로 대체된다.
+          대입 연산자 => Equal(=) 
+          산술 연산자 => 
+      */
+    }
+
+    function increase() {
+      a = a + 10;
+      /*
+          10 증가 시키기 버튼을 누를 때마다 a 변수 안에 있는 값이 10씩 증가하도록 만들 수 있다.
+      */
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_QUIZ.html</title>
+</head>
+
+<body>
+  <input type="text" id="inputMsg" placeholder="메시지 입력...">
+  <button onclick="send()">전송</button><br>
+  <p id="result"> </p>
+  <script>
+    /*
+            전송 버튼을 누르면 input 요소에 입력한 문자열을 p 요소의 innerText로 넣어 보세요.
+        */
+
+    /*
+        let msg=document.querySelector("#inputMsg").value;
+
+    */
+    function send() {
+      let a = document.querySelector("#inputMsg").value;
+      document.querySelector("#result").innerText = a;
+      // 위 코드를 직관적으로 해석해 보면, inputMsg라는 id를 가진 텍스트박스를 a라는 변수로 놓고,
+      // result라는 id를 가진 p요소의 innerText에 a라는 변수를 대입하겠다는 것이다.
+      // 이거 직관적으로 해석하면 개쉬운데 계속머리를빙빙굴려대니까시발년아계속헷갈리잖아
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step09_form3.html</title>
+  <style>
+    body {
+      margin: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>html5 에서 추가된 form 요소 (입력 필드)</h1>
+  <!--
+        현재 지원이 되는 브라우저도 있고 안 되는 브라우저도 있어서 범욕적으로 사용할 수는 없지만, 참고로 알아놓으면 좋음.
+        크롬과 엣지에서는 적용이 잘 되고, 지원하지 않는 브라우저에서는 input type="text"로 인식하게
+    -->
+  <form action="insert.jsp">
+    <label for="color">
+      색상 선택
+      <!-- 색상을 직접 선택할 수 있게끔 색상 피커가 표시된다. -->
+      <input type="color" id="color" name="color">
+    </label>
+    <br><br>
+
+    <label for="range">
+      범위
+      <!-- 범위를 선택할 수 있게끔 슬라이드 바가 표시된다.-->
+      <input type="range" id="range" name="range" min="10" max="100" step="1" value="10">
+    </label>
+    <br><br>
+
+    <label for="date">
+      날짜
+      <!-- 날짜를 입력할 수 있게끔 텍스트 필드와 달력 필드가 함께 표시된다. -->
+      <input type="date" id="date" name="date">
+    </label>
+    <br><br>
+
+    <label for="time">
+      시간
+      <!-- 시간을 직접 입력할 수 있는 텍스트 필드와 시간을 선택할 수 있는 특별한 입력기가 표시된다. -->
+      <input type="time" id="time" name="time">
+    </label>
+    <br><br>
+
+    <label for="number">
+      숫자
+      <!-- 숫자를 보다 쉽게 입력할 수 있는 텍스트 필드와 화살표가 있다.-->
+      <input type="number" id="number" name="number" min="0" max="100" step="10">
+    </label>
+    <br><br>
+
+    <button type="submit">저장</button>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_dataType2.html</title>
+</head>
+
+<body>
+  <h1>javascript dataType2</h1>
+  <script>
+    /*
+            참과 거짓을 나타낼 때 사용하는 boolean type(true/false)
+            
+            > 왼쪽이 오른쪽보다 큰지 비교하기
+            < 왼쪽이 오른쪽보다 작은지 비교하기
+            >= 왼쪽이 오른쪽보다 크거나 같은지 비교하기
+            <= 왼쪽이 오른쪽보다 작거나 같은지 비교하기
+            부등 연산자 != 양쪽의 값이 다른지 비교하기
+            불일치 연산자 !== 양쪽의 타입과 값이 모두 다른지 비교하기 ("1234" !== 1234 -> true / "1234" !== "1234" -> false)
+            동등 연산자 == 양쪽의 값이 같은지 비교하기
+            일치 연산자 === 양쪽의 타입과 값이 모두 같은지 비교하기 ("1234" === 1234 -> false / "1234" === "1234" -> true)
+
+            boolean type 데이터가 들어가는 변수의 이름을 대화식으로 지으면 가독성이 좋다.
+            isXXX, canXXX
+        */
+    let isRun = true;
+    let isWait = false;
+    let canEat = true;
+
+    //왼쪽이 오른쪽보다 큰지 비교하기
+    let result = 10 > 1;
+
+    //왼쪽이 오른쪽보다 작거나 같은지 비교하기
+    let result2 = 10 <= 1;
+
+    //양쪽의 값이 같은지 비교하기
+    let result3 = 10 == 10;
+
+    //양쪽의 값이 다른지 비교하기
+    let result4 = 10 != 10;
+
+    //양쪽의 값이 같은지 비교하기
+    let result5 = "kim" == "lee";
+
+    //양쪽의 값이 다른지 비교하기
+    let result6 = "kim" != "lee";
+  </script>
+</body>
+
+</html>

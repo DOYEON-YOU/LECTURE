@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_dataType8.html</title>
+</head>
+
+<body>
+  <script>
+    // object와 fuction의 작성법을 잘 구분해야 한다.
+    let getData = function () {
+      let obj = {
+        // object의 작성법인 key : value, 만 지켜주면 된다.
+        num: 1,
+        name: "권도연",
+        sing: function () {
+          alert("노래해요!");
+        } //세미콜론 붙이면 안 됨.
+      };
+      return obj;
+    };
+
+    //a에는 object type의 참조값이 들어 있다
+    let a = getData();
+    //b에도 object type의 참조값이 들어 있다
+    let b = getData();
+    //실제로 a와 b는 각자 다른 데이터를 가지고 있고 주소만 같은 것이기 때문에 다르다.
+    let result = a == b;
+  </script>
+</body>
+
+</html>

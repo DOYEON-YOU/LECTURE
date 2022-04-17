@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello4.html</title>
+</head>
+
+<body>
+  <h1>javascript 테스트</h1>
+  <script>
+    //어떤 변수에 나의 이름을 저장할 수 있을까? 
+    /*
+        콘솔 창에 10+10 입력 => 20 => 산술 연산
+        콘솔 창에 "10" + "10" or 10 + "10" 입력 => 1010 => 연결 연산
+        어느 한 쪽에 문자가 있으면 연결 연산을 한다.
+    */
+    let myName = "권도연";
+
+    //myName 변수 안에 들어 있는 문자열을 이용해서 "이름+님" 이라는 문자열을 만들 수 있을까?
+    let result = myName + "님";
+
+    let weight = 75;
+
+    //weight 변수 안에 들어있는 숫자를 이용해서 "75kg" 이라는 문자열을 만들 수 있을까?
+    let result2 = weight + "kg";
+
+    //myName과 weight를 이용해서  "이름: 권도연 몸무게: 75kg" 이라는 문자열을 만들어 보자.
+    let result3 = "이름: " + myName + " " + "몸무게: " + result2;
+  </script>
+</body>
+
+</html>

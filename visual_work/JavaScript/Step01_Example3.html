@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_Example3.html</title>
+</head>
+
+<body>
+  <!--
+          input 요소는 innerText가 존재하지 않는다.
+          그렇다면 input 요소에 입력한 값을 자바스크립트로 불러오려면 어떻게 할까?
+          콘솔 창에 document.querySelector("#one").value 를 입력하면 된다.
+          대입 연산자(=)를 활용하면 대입 연산자의 우측에 있는 값을 직접 value나 innerText에 넣을 수 있다.
+     -->
+  <input type="text" id="one">
+  <p id="two">p1</p>
+  <button id="three">버튼</button>
+  <script>
+    // input, select, textarea는 value 값을 읽어오거나 넣어줄 수 있다.
+    // value 값 읽어오기 -> document.querySelector("#id명").value
+    // value 값 넣어 주기 -> document.querySelector("#id명").value = "넣고 싶은 문자열";
+    // 아래 예시로 활용하는 법을 배워보자.
+
+    // value 값 넣어 주기
+    document.querySelector("#one").value = "권도연";
+    // value 값 읽어오기
+    let a = document.querySelector("#one").value;
+  </script>
+</body>
+
+</html>

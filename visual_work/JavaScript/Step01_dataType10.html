@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step01_dataType10.html</title>
+</head>
+
+<body>
+
+  <!--
+          document도 object이다. 콘솔창에 typeof document를 입력해 보면 알 수 있다.
+          document.querySelector("p")를 입력하면 p 요소의 값이 나온다.
+          p1이라는 변수를 만들고 document.querySelector("p")를 입력해 보자.
+          let p1=document.querySelector("p");
+          이제 이 변수의 type을 확인해 보기 위해 typeof p1을 입력하면 object type이라고 나온다.
+          p는 문자열이기 때문에 당연히 string type이 나올 줄 알았는데, 왜 object type이 나올까?
+
+          p는 문서 객체 모델(DOM)이기 때문이다. 문서 객체란 html, head, body, title 등 모든 요소를 정의한다.
+          p요소는 body 요소에 포함되어 있는 것 뿐이지, 하나의 Type을 가지고 있는 게 아니라는 말이다.
+          p요소를 비롯한 다른 요소들은 모두 object type이다.
+
+          document.querySelector은 object값을 불러오고, document.querySelectorAll은 array 값을 불러오기 때문에
+          let a=document.querySelector("p"); 와
+          let b=document.querySelectorAll("p")[0]; 의 값은 <p>p1입니다.</p>로 같다.
+          
+          그렇다면 p 요소 세 개 중 마지막 요소에 스타일을 넣고 싶으면 어떻게 불러올까?
+          p 요소는 object type이기 때문에 p요소를 querySelector로 모두 불러오게 되면 전체 p요소는 array type이 된다. 따라서
+          document.querySelectorAll("p")[2].style
+          위처럼 p라는 object type이 모여있는 배열(array)의 2번째 index를 불러와
+          p3입니다. 라는 innerText를 가진 마지막 p 요소에 스타일이 적용된다.
+     -->
+  <!--
+          document.querySelector("p")를 콘솔 창에 입력하면 <p>p1입니다.</p>라는 값이 나온다.
+          위 값은 실제 p1이 아닌 p1의 참조값이며, 참조값이라는 것을 잘 알고 있어야 한다.
+     -->
+  <!--
+          함수에서 paragraph에 접근하기 위해서는 반드시 document라는 object가 필요하다.
+          ex) document.querySelector("#id" or ".class")
+          위 예시에서 querySelector 함수를 볼 수 있는데, querySelector 함수는 조건에 부합하는 문서 객체를 최초 한 개만 찾아온다.
+          p2와 p3은 모두 my-class라는 class를 가지고 있는데, querySelector은 최초로 class를
+          가지고 있는 p2만을 불러올 수 있기 때문에 p2와 p3을 모두 불러오려면 querySelectorAll 함수를 사용해야 한다.
+     -->
+  <p>p1입니다.</p>
+  <!-- p 요소는 document object, 즉 문서 객체이다. -->
+  <p id="one" class="my-class">p2입니다.</p>
+  <p class="my-class">p3입니다.</p>
+
+
+  <script>
+    /* 함수에 전달된 두 수의 합을 콘솔창에 출력하는 함수
+          let 변수명=function(매개변수, 매개변수){};
+          매개변수를 이용해 산술 연산을 하고 싶으면 콘솔창에 변수명(원하는 값, 원하는 값)을 입력한다.
+          아래 함수에서 산술 연산을 통해 300이라는 답을 얻기 위해서는 showSum(100, 200) 을 콘솔창에 입력하면 된다. */
+
+    let showSum = function (num1, num2) {
+      let result = num1 + num2;
+      console.log(num1 + " 과 " + num2 + " 의 합은: " + result);
+    };
+
+    //함수에 전달된 두 수의 합을 반환해 주는 함수
+    let getSum = function (num3, num4) {
+      let result2 = num3 + num4;
+      return result2;
+    };
+  </script>
+</body>
+
+</html>
